@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 List<String> categories = [
-  'Category 1',
-  'Category 2',
-  'Category 3',
-  'Category 4',
-  'Category 5',
-  'Category 6',
-  'Category 7',
-  'Category 8',
+  'assets/images/image1.jpg',
+  'assets/images/image2.jpg',
+  'assets/images/image3.jpg',
+  'assets/images/image4.jpg',
+  'assets/images/image5.jpg',
+  'assets/images/image6.jpg',
+  'assets/images/image7.jpg',
+  'assets/images/image8.jpg',
 ];
 
-List<Widget> numbers = categories.map((category) {
+List<Widget> numbers = categories.map((image) {
   return Card(
     color: Colors.red,
-    child: Text(category,
+    child: Text(image,
         textAlign: TextAlign.center,
         style: TextStyle(
           color: Colors.white,
