@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 
-List<String> categories = [
-  'assets/images/image1.jpg',
-  'assets/images/image2.jpg',
-  'assets/images/image3.jpg',
-  'assets/images/image4.jpg',
-  'assets/images/image5.jpg',
-  'assets/images/image6.jpg',
-  'assets/images/image7.jpg',
-  'assets/images/image8.jpg',
-];
+List<String> generate() {
+  List<String> imageList = [];
+  for (var i = 1; i < 9; i++) {
+    imageList.add('assets/images/image${i}.jpg');
+  }
+  return imageList;
+}
 
-List<Widget> numbers = categories.map((image) {
+List<String> categories = generate();
+
+List<Widget> numbers = categories.map((category) {
   return Card(
     color: Colors.red,
-    child: Text(image,
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 25,
-        )),
+    child: Image.asset(
+      category,
+      fit: BoxFit.cover,
+    ),
   );
 }).toList();
